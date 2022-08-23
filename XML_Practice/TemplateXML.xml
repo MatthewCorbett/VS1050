@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8?"?>
+
+<!-- Start of DTD -->
+<!DOCTYPE template [
+<!ELEMENT template (template2+)>
+    <!ELEMENT template2 (#PCDATA)>
+]>
+
+<!-- Start of XML -->
+<template>
+    <template2>
+
+    </template2>
+    <template2>
+
+    </template2>
+</template>

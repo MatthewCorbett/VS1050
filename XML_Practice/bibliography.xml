@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8?"?>
+
+<!-- Start of DTD -->
+<!DOCTYPE bibliography [
+<!ELEMENT bibliography (book+, journal+)>
+  <!ELEMENT book (author+, title, pub?, year, URL*)>
+  <!ELEMENT journal (author+, title, name, volumeNo, issueNo, pageNo?, year, URL*)>
+  <!ELEMENT author ((givenname | nickname)?, surname)>
+  <!ELEMENT givenname (#PCDATA)>
+  <!ELEMENT nickname (#PCDATA)>
+  <!ELEMENT surname (#PCDATA)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT pub (#PCDATA)>
+  <!ELEMENT year (#PCDATA)>
+  <!ELEMENT URL (#PCDATA)>
+  <!-- Specific to journal -->
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT volumeNo (#PCDATA)>
+  <!ELEMENT issueNo (#PCDATA)>
+  <!ELEMENT pageNo (#PCDATA)>
+]>
+
+<!-- Start of XML -->
+<bibliography>
+    <book>
+     <author>
+         <nickname>Fred</nickname>
+         <surname>Flintstone</surname>
+     </author>
+     <author>
+         <givenname>Helen</givenname>
+         <surname>James</surname>
+     </author>
+     <title>"Statistical Database Disclosure"</title>
+     <year>2006</year>
+     <URL>http://some.webaddress.com</URL>
+     <URL>http://another.webaddress.com</URL>
+    </book>
+    <book>
+     <author>
+         <surname>Simpson</surname>
+     </author>
+     <title>"Homer's Odyssey"</title>
+     <pub>Springer Verlag</pub>
+     <year>2003</year>
+    </book>
+    <journal>
+        <author>
+            <givenname>Damien</givenname>
+            <surname>Blake</surname>
+        </author>
+        <title>"Blue Bird"</title>
+        <name>"Bird Watching"</name>
+        <volumeNo>2</volumeNo>
+        <issueNo>3</issueNo>
+        <pageNo>10-17</pageNo>
+        <year>2012</year>
+    </journal>
+ </bibliography>

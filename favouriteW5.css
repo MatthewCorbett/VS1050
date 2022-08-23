@@ -1,0 +1,21 @@
+/* stylesheet for favouriteW5 */
+
+body{
+    margin-left: 50px;
+    background-image: url(./Images/water_loop.jpg);
+    background-size: 8em;
+}
+ul {list-style-type: square;}
+
+img {
+    width: 100px; height: auto;
+    margin: 10px; padding: 10px;
+    border: 0.5em ;border-color: black; border-style: dashed;
+}
+
+h1 {text-align: center;}
+
+p{
+    background-color: #FFFFFF;
+    padding: 10px;
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8?"?>
+
+<!-- Start of DTD -->
+<!DOCTYPE bookings [
+<!ELEMENT bookings (booking*)>
+    <!ELEMENT booking (passenger, leg+)>
+    <!-- passenger information -->
+    <!ELEMENT passenger (name, address?, phone?)>
+    <!ELEMENT name (givenname, surname, initials)>
+    <!ELEMENT givenname (#PCDATA)>
+    <!ELEMENT surname (#PCDATA)>
+    <!ELEMENT initials (#PCDATA)>
+    
+    <!ELEMENT address (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+    
+    <!-- flights -->
+    <!ELEMENT leg (date, flight, departure, arrival, aircraft?)>
+    <!ATTLIST leg class (Business|Economy) #IMPLIED>
+    
+    <!ELEMENT date (#PCDATA)>
+    <!ELEMENT flight (#PCDATA)>
+
+    <!ELEMENT departure (#PCDATA)>
+    <!ATTLIST departure time CDATA #REQUIRED>
+    <!ATTLIST departure airport-code CDATA #REQUIRED>
+
+    <!ELEMENT arrival (#PCDATA)>
+    <!ATTLIST arrival time CDATA #REQUIRED>
+    <!ATTLIST arrival airport-code CDATA #REQUIRED>
+    
+    <!ELEMENT aircraft (#PCDATA)>
+
+    <!-- Entities -->
+    <!ENTITY B744 "Boeing 744">
+    <!ENTITY B73H "Boeing 737-800">
+]>
+
+<!-- Start of XML -->
+<bookings>
+    <booking>
+        <passenger>
+            <name>
+                <givenname>Paul</givenname>
+                <surname>Franks</surname>
+                <initials>PJF</initials>
+            </name>
+            <address>University of Newcastle, University Drive, Callaghan, 2308</address>
+            <phone>0249216175</phone>
+        </passenger>
+        <!-- first flight -->
+        <leg class="Economy">
+           <date>11 Aug 2003</date>
+            <flight>QF005</flight>
+            <departure time="15:45" airport-code="SYD"> </departure>
+            <arrival time="21:34" airport-code="SIN"></arrival>
+            <aircraft>&B744;</aircraft> 
+        </leg>
+        <!-- second flight -->
+        <leg class="Economy">
+            <date>21 Aug 2003</date>
+            <flight>QF010</flight>
+            <departure time="19:45" airport-code="SIN"></departure>
+            <arrival time="04:55" airport-code="MEL"></arrival>
+        </leg>
+        <!-- third flight -->
+        <leg class="Business">
+            <date>24 Aug 2003</date>
+            <flight>QF434</flight>
+            <departure time="13:00" airport-code="MEL"></departure>
+            <arrival time="14:20" airport-code="SYD"></arrival>
+            <aircraft>&B73H;</aircraft>
+        </leg>
+    </booking>
+</bookings>

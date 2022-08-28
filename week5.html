@@ -20,10 +20,21 @@
         a.email:active {color: red;}
         a.email:link {color: black;}    
         a.email:visited {color: darkorchid;}
+
+        /* selectors practice */
+        #bgc {background-color: white;}
+        .class {color: black;}
+        li:nth-child(2n) {background-color: red;}
+
+        /* test css for quizzes */
+        em:hover {font-weight: bold;}
+        #blue {color: blue ;}
+        p {color: red;}
+        img.important[alt="rl"]{width: 70%;}
     </style>
 </head>
 <body>
-    <h1>My Favourite Things</h1> 
+    <h1 id="blue">My Favourite Things</h1> 
     <hr>
     <div style="text-align: center;">
         <a href="./index.html">back to index</a> -
@@ -35,21 +46,21 @@
 
         <!-- first favourite thing -->
         <h2 id="rl">Rocket League</h2>
-        <p>This game is <strong>soccer</strong> but with cars</p>
+        <p id="bgc" class="class">This game is <strong>soccer</strong> but with cars</p>
         <ul>
             <li><a href="https://www.rocketleague.com/">https://www.rocketleague.com/</a></li>
             <li>2</li>
         </ul>
         <blockquote cite="https://www.rocketleague.com/">WELCOME TO THE HIGH-POWERED HYBRID OF ARCADE-STYLE SOCCER AND VEHICULAR MAYHEM!</blockquote>
         <div>
-            <img src="./Images/rl_image.jpg" alt="car soccer" width="100" height="100"/>
+            <img src="./Images/rl_image.jpg" alt="rl" width="100" height="100"/>
         </div>
         <hr>
 
         <!-- Second favourite thing -->
         <h2 id="val">Valorant</h2>
         <p>a 5v5 shooter that is <em>Similar</em> to counter-strike</p>
-        <ul>
+        <ul class="class">
             <li>1</li>
             <li>2</li>
         </ul>

@@ -19,3 +19,6 @@ p{
     background-color: #FFFFFF;
     padding: 10px;
 }
+
+body {background: yellow;}
+li {background-color: chartreuse;}

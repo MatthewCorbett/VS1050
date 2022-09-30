@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- lab said use <style type="text/css"> -->
+    <style>
+      td {
+        border-style: solid;
+        border-width: 1px;
+        text-align: right;
+        padding: 5px;
+      }
+
+      td.text {
+        text-align: left;
+      }
+
+      thead {
+        background-color: aquamarine;
+      }
+
+      tbody {
+        background-color: antiquewhite;
+      }
+
+      tfoot {
+        background-color: gray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <a href="./index.html">back to index</a>
+    </div>
+    <p>HTML Forms, Tables, Image Maps (Client Side), CSS Layouts</p>
+
+    <h2>Form</h2>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+      <input type="text" placeholder="first name only" required><br>
+      <input type="text" placeholder="lst name only" required><br>
+      <input type="date" required><br>
+      <input type="number" min="18" max="99" value="18"><br>
+      <input type="email" placeholder="email here" required><br>
+      <input type="url" placeholder="your website"><br>
+      <input type="tel" placeholder="phone number" required><br>
+      <input type="range" min="1" max="10" value="1"><br>
+      <textarea rows="5" placeholder="address" required></textarea><br>
+      <label>postcode: </label>
+      <input type="text" size="4" maxlength="4"><br>
+      <label>State: </label>
+      <select>
+        <option>NSW</option>
+        <option>QLD</option>
+        <option>SA</option>
+        <option>TAS</option>
+        <option>VIC</option>
+        <option>WA</option>
+      </select><br><br>
+
+      <fieldset>
+        <legend>Card Details</legend>
+        <label for="card-type">visa:</label>
+        <input type="radio" name="card" id="card-type" checked>
+        <label>mastercard:</label>
+        <input type="radio" name="card">
+        <label>amex:</label>
+        <input type="radio" name="card"><br>
+
+        <input type="text" placeholder="Full name on card" required><br>
+        <input type="number" placeholder="card number" required><br>
+        <label>Security Code: </label>
+        <input type="number" min="3" max="3"><br>
+        <label>Expiry Date: </label>
+        <input type="month"><br>
+      </fieldset>
+
+      <div>
+        <input type="submit">
+        <input type="reset">
+      </div>
+
+      <!-- Task: explicitly label every form control -->
+      <!-- This means use for in label, and id in control -->
+    </form><br>
+
+    <h2>Tables</h2>
+    <table>
+      <caption>Some Domain Name Data</caption>
+      <thead>
+        <tr>
+          <th>Domain</th>
+          <th>Hosts =</th>
+          <th>All hosts -</th>
+          <th>Dup Names</th>
+          <th>Level 2 Domains</th>
+          <th>Level 3 Domains</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- row 1 -->
+        <tr>
+          <td class="text">net</td>
+          <td>360053096</td>
+          <td>374382056</td>
+          <td>14328960</td>
+          <td>389884</td>
+          <td>55265128</td>
+          <td class="text">Networks</td>
+        </tr>
+
+        <!-- row 2 -->
+        <tr>
+          <td class="text">com</td>
+          <td>160630724</td>
+          <td>196802128</td>
+          <td>36171404</td>
+          <td>2832098</td>
+          <td>22941447</td>
+          <td class="text">Commercial</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="text">TOTAL</td>
+          <td>963518598</td>
+          <td>1041878553</td>
+          <td>78359955</td>
+          <td>4955061</td>
+          <td>120898098</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+    <a href="https://ftp.isc.org/www/survey/reports/2013/01/bynum.txt">Data Found Here</a>
+    <!-- for extra homework, test using colspan and rowspan -->
+
+    <h2>Image Maps</h2>
+    <img src="./Images/australia.jpg" alt="australia" usemap="#aus-gov">
+    <map name="aus-gov">
+      <area shape="default" href="./index.html" alt="home">
+      <area shape="rect" coords="350,160,450,200" href="https://www.nsw.gov.au/" alt="nsw">
+      <area shape="circle" coords="380,290,50" href="https://www.tas.gov.au/" alt="tasmania">
+    </map>
+
+    <h2>CSS Layouts</h2>
+      <p>This is done in task4 file</p>
+
+
+  </body>
+
+</html>
